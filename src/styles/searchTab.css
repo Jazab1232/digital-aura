@@ -1,0 +1,41 @@
+.searchTab {
+    width: 250px;
+    height: 150px;
+    background-color: #333333;
+    position: fixed;
+    right: 10px;
+    top: 60px;
+    border-radius: 10px;
+    z-index: 101;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 20px;
+    padding: 10px;
+}
+
+.searchLink {
+    color: white;
+    /* text-decoration: none; */
+    cursor: pointer;
+}
+
+.searchTab::-webkit-scrollbar {
+    width: 8px;
+    /* Set the width of the scrollbar */
+}
+
+.searchTab::-webkit-scrollbar-thumb {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.searchTab::-webkit-scrollbar-track {
+    background-color: #214252;
+}
+
+.searchTab {
+    scrollbar-width: thin;
+    scrollbar-color: #F5F5F5 #747474;
+}

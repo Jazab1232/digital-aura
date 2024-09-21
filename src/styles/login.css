@@ -1,0 +1,89 @@
+.adminLoginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.adminLoginCard {
+    width: 400px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(226, 232, 240); 
+}
+
+.adminLoginHeader {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    border-bottom: none;
+    text-align: center;
+    background-color: rgb(30, 41, 59); /* Dark header by default */
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Admin Icon */
+.adminLoginIcon {
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.adminLoginIcon img {
+    width: 80px;
+    height: 80px;
+}
+
+.adminLoginTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(226, 232, 240);
+}
+
+.adminLoginBody {
+    padding: 20px 10px;
+}
+
+.adminLoginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.adminLoginInput {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: transparent;
+}
+
+.adminLoginInput:focus {
+    border-color: #007bff;
+}
+
+.adminLoginButton {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(30, 41, 59); 
+    transition: background-color 0.3s ease;
+    color: #ccc;
+}
+
+.adminLoginButton:hover {
+    opacity: 0.9;
+}

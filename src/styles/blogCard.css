@@ -1,0 +1,51 @@
+.blogCard {
+    width: 32%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.blogCard:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.256);
+}
+
+.blogImg {
+    width: 100%;  
+    height: 200px; 
+    overflow: hidden;
+}
+
+.blogImg img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.blogCartContent {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: inherit;
+}
+
+.cardCategory {
+    font-size: 13px;
+    opacity: .8;
+    margin-top: 20px;
+    font-family: inherit;
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.cardText {
+    font-size: 14px;
+    font-family: inherit;
+}
