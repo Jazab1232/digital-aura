@@ -34,11 +34,11 @@ const router = createBrowserRouter([
         element: <CreateBlog />,
       },
       {
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard />
       },
       {
-        path: "login",
+        path: "/login",
         element: <Login />,
       },
 
