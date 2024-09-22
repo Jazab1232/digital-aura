@@ -5,6 +5,7 @@ import TrendingCard from './TrendingCard'
 import BlogCard from './BlogCard'
 import ScrollToTop from './ScrollOnTop'
 import { useOutletContext } from 'react-router-dom'
+import BeatLoader from "react-spinners/BeatLoader";
 
 export default function Home() {
   const { blogData, setBlogData } = useOutletContext();
@@ -15,11 +16,12 @@ export default function Home() {
 
   if (blogData.length === 0) {
     return (
-      <div style={{ marginTop: '200px', marginBottom: '200px' }}>
-        <p >Loading...</p>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <BeatLoader color="#214252" size={30} />
       </div>
     );
   }
+
   return (
     <div className='home'>
       <div className="mainSection">

@@ -6,8 +6,11 @@ import { firestore, storage } from './config/config';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import { useNavigate, useOutletContext } from 'react-router-dom';
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 export default function App() {
+    const [loading, setLoading] = useState(false);
     const [content, setContent] = useState('');
     const [image, setImage] = useState(null); // Ensure it's initialized as an array
     const [url, setUrl] = useState("");
@@ -28,7 +31,7 @@ export default function App() {
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
                 const fetchedData = docSnap.data().blogData || [];
-                setBlogData(fetchedData); 
+                setBlogData(fetchedData);
             } else {
                 console.log("No such document!");
             }
@@ -39,7 +42,7 @@ export default function App() {
 
     const handleSave = async () => {
         if (!image) return;
-
+        setLoading(true);
         const storageRef = ref(storage, `images/${image.name}`);
         const uploadTask = uploadBytesResumable(storageRef, image);
         uploadTask.on(
@@ -52,6 +55,7 @@ export default function App() {
             },
             (error) => {
                 console.error("Upload error:", error);
+                setLoading(false);
             },
             async () => {
                 const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
@@ -66,8 +70,8 @@ export default function App() {
                     imageUrl: downloadURL,
                 };
 
-                const updatedBlogData = [...blogData, newBlog]; // Create a new array with the new blog
-                setBlogData(updatedBlogData); // Update the blogData state
+                const updatedBlogData = [...blogData, newBlog];
+                setBlogData(updatedBlogData);
 
                 try {
                     await setDoc(doc(firestore, "blogData", 'blogData'), { blogData: updatedBlogData });
@@ -75,6 +79,8 @@ export default function App() {
                 } catch (error) {
                     console.error('Error saving blog data:', error);
                     alert('Failed to save blog data');
+                } finally {
+                    setLoading(false);
                 }
             }
         );
@@ -153,8 +159,12 @@ export default function App() {
                 onEditorChange={(newContent) => setContent(newContent)}
             />
 
-            <button onClick={handleSave} className='saveBtn'>
-                Save Content
+            <button onClick={handleSave} className='saveBtn' disabled={loading}>
+                {loading ? (
+                    <ClipLoader color="#ffffff" loading={loading} size={20} />
+                ) : (
+                    "Save Content"
+                )}
             </button>
 
             <div style={{ marginTop: '20px' }}>
