@@ -10,6 +10,7 @@ body{
     box-sizing: border-box;
     background-color: #EFEAF6;
     font-family: "Poppins", sans-serif;
+    max-width: 100vw;
 }
 .contentContainer{
     position: absolute;

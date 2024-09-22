@@ -2,12 +2,14 @@ import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import '../styles/dashboard.css'
 import { doc, setDoc } from 'firebase/firestore';
-import { firestore } from './config/config';
+import { auth, firestore } from './config/config';
 import { useAuth } from './auth/AuthContext';
+import { signOut } from 'firebase/auth';
 
 function Dashboard() {
     const { blogData, setBlogData } = useOutletContext();
     const { setIsAuthenticated, isAuthenticated } = useAuth();
+
     function handleLogout() {
         signOut(auth)
             .then(() => {

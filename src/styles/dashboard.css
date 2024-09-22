@@ -2,6 +2,7 @@
     padding: 40px;
     margin-top: 100px;
     width: 100vw;
+    box-sizing: border-box;
 }
 
 .dashboardHeader {
@@ -12,6 +13,7 @@
     padding-left: 20px;
     padding-right: 20px;
     gap: 30px;
+    box-sizing: border-box;
 }
 
 .profileSection {
@@ -92,6 +94,7 @@
 
 .blogTableContainer {
     margin-top: 30px;
+
 }
 
 .tableWrapper {
@@ -138,4 +141,175 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+
+
+
+/*Responsive Styles */
+@media (max-width: 768px) {
+    .dashboardContainer {
+        padding: 0px;
+        margin-top: 60px;
+        margin-left: 5%;
+        width: 95%;
+        align-content: center;
+
+    }
+
+    .dashboardHeader {
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 95%;
+        gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .profileDetails{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .profileImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profileName {
+        font-size: 20px;
+    }
+
+    .profileRole,
+    .profileEmail,
+    .profileBlogsCount {
+        font-size: 14px;
+    }
+
+    .actionButtons {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .button {
+        width: 100px;
+        padding: 8px;
+    }
+    .blogTableContainer{
+        max-width: 95vw;
+        box-sizing: border-box;
+    }
+
+    .blogTable {
+        font-size: 12px;
+    }
+
+    .tableHeading, .tableData {
+        padding: 8px;
+    }
+
+    .thumbnailImage {
+        width: 50px;
+    }
+    .tableWrapper {
+        overflow-x: auto;
+        width: 95%;
+    }
+
+    /* Stack table rows into blocks on mobile */
+    .blogTable {
+        display: block;
+        width: 95%;
+        border-collapse: collapse;
+    }
+
+    .tableHeader,
+    .tableHeading {
+        display: none; /* Hide the headers on small screens */
+    }
+
+    .tableRow {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #d3d3d3;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        
+    }
+
+    .tableData {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        font-size: 14px;
+        position: relative;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .tableData:last-child {
+        border-bottom: none;
+    }
+
+    .tableData::before {
+        content: attr(data-label); /* Use custom attribute to show the label */
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: #333;
+        text-align: left;
+    }
+
+    .thumbnailImage {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .deleteButton {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboardContainer {
+        padding: 5px;
+        margin-top: 50px;
+    }
+
+    .profileImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profileName {
+        font-size: 18px;
+    }
+
+    .profileRole,
+    .profileEmail,
+    .profileBlogsCount {
+        font-size: 12px;
+    }
+
+    .blogTable {
+        font-size: 10px;
+    }
+
+    .thumbnailImage {
+        width: 40px;
+    }
+
+    .tableHeading, .tableData {
+        padding: 6px;
+    }
+    .tableData {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .thumbnailImage {
+        width: 60px;
+    }
 }

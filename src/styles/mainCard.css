@@ -6,7 +6,7 @@
     color: white;
     cursor: pointer;
     text-decoration: none;
-    
+
 }
 
 .mainCardImg {
@@ -42,29 +42,136 @@
     flex-direction: column;
     gap: 10px;
 }
-.mainCardContent .category{
+
+.mainCardContent .category {
     font-size: 16px;
     opacity: .9;
 }
-.mainCardContent .title{
+
+.mainCardContent .title {
     font-size: 32px;
     font-weight: 800;
 }
-.publishDetail{
+
+.publishDetail {
     display: flex;
     gap: 20px;
 }
-.publishDetail p{
-font-size: 13px;
-opacity: .9;
-display: flex;
-gap: 5px;
-align-items: center;
+
+.publishDetail p {
+    font-size: 13px;
+    opacity: .9;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
-.publishDetail p i{
-font-size: 11px;
-opacity: .8;
+
+.publishDetail p i {
+    font-size: 11px;
+    opacity: .8;
 }
-.mainCardText{
+
+.mainCardText {
     font-size: 18px;
+}
+
+@media (max-width:882px) {
+    .mainCardContent .title {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .mainCardText {
+        font-size: 16px;
+    }
+
+    .mainCardContent .category {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:740px) {
+    .mainCardContent .title {
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .mainCardText {
+        font-size: 14px;
+    }
+
+    .mainCardContent .category {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:640px) {
+    .mainCardContent .title {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .mainCardText {
+        font-size: 12px;
+    }
+
+    .mainCardContent .category {
+        font-size: 12px;
+    }
+
+    .publishDetail p {
+        font-size: 10px;
+
+    }
+
+    .publishDetail p i {
+        font-size: 10px;
+        opacity: .8;
+    }
+    .mainCardContent {
+       
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width:540px) {
+    .mainCardContent .title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .mainCardText {
+        font-size: 12px;
+    }
+
+    .mainCardContent .category {
+        font-size: 10px;
+    }
+
+
+    .mainCardContent {
+       gap: 5px;
+        padding: 30px 20px;
+    }
+}
+@media (max-width:480px) {
+    .mainCardContent .title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .mainCardText {
+        display: none;
+    }
+
+    .mainCardContent .category {
+        font-size: 10px;
+    }
+
+
+    .mainCardContent {
+       gap: 5px;
+        padding: 10px 20px;
+    }
+
 }

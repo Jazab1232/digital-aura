@@ -40,12 +40,34 @@
     flex-direction: column;
     gap: 10px;
 }
-.TrendCardCategory{
+
+.TrendCardCategory {
     font-size: 10px;
     opacity: .9;
     font-weight: 100;
 }
-.TrendCardTitle{
+
+.TrendCardTitle {
     font-size: 12px;
     font-weight: 600;
+}
+
+
+@media (max-width:882px) {
+    .TrendCardTitle {
+        font-size: 10px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:480px) {
+    .TrendCardTitle {
+        font-size: 7px;
+        font-weight: 300;
+    }
+
+    .TrendCardContent {
+        padding: 3px;
+    }
+
 }

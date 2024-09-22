@@ -5,7 +5,6 @@ import TrendingCard from './TrendingCard'
 import BlogCard from './BlogCard'
 import ScrollToTop from './ScrollOnTop'
 import { useOutletContext } from 'react-router-dom'
-import SideNav from './SideNav'
 
 export default function Home() {
   const { blogData, setBlogData } = useOutletContext();
@@ -31,7 +30,7 @@ export default function Home() {
           })}
         </div>
         <div className="TrendingBlog">
-          <p>Trending Blogs</p>
+          <p className='trendingTitle'>Trending Blogs</p>
           {trendingPost.map((data, i) => {
             return <TrendingCard data={data} key={i} />
           })}

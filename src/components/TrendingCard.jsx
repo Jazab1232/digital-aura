@@ -4,7 +4,8 @@ import mainImg from '../assets/mainCard.jpg'
 import { Link } from 'react-router-dom'
 import ScrollToTop from './ScrollOnTop'
 
-export default function TrendingCard({data}) {
+export default function TrendingCard({ data }) {
+
 
     return (
 
@@ -14,7 +15,7 @@ export default function TrendingCard({data}) {
             </div>
             <div className="TrendCardContent">
                 <div className="TrendCardTitle">
-                    <p>{data.title}</p>
+                    <p>{data.title.split(" ").slice(0, 7).join(" ")}...</p>
                 </div>
 
             </div>

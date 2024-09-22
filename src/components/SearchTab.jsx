@@ -13,15 +13,17 @@ export default function SearchTab({ search, setSearch, blogData }) {
         setSearch('')
     }
     return (
-        <div className='searchTab' style={{ display: searchQuery == '' ? 'none' : 'flex' }}>
-            {
-                searchData.map((data) => {
-                    return (
-                        <Link to={`/detail?id=${data.id}`} className='searchLink' key={data.id} onClick={handleSearch} >{data.title}</Link>
-                    );
-                })
+        <div className='searchContainer' style={{ display: searchQuery == '' ? 'none' : 'flex' }}>
+            <div className='searchTab'  style={{ paddingBottom: '10px' }}>
+                {
+                    searchData.map((data) => {
+                        return (
+                            <Link to={`/detail?id=${data.id}`} className='searchLink' key={data.id} onClick={handleSearch} >{data.title}</Link>
+                        );
+                    })
 
-            }
+                }
+            </div>
         </div>
     )
 }

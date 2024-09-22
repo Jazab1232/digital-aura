@@ -7,9 +7,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 0 5px;
-    position: relative;
-    bottom: 0px;
-    width: 100vw;
+    max-width: 100vw;
 }
 
 .footerIcon {
@@ -19,15 +17,7 @@
 }
 
 .footerIcon i {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px; */
     font-size: 25px;
     color: white;
-    /* background-color: #fff;
-    color: #214252;
-    border-radius: 30px; */
 
 }

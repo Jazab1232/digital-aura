@@ -10,7 +10,6 @@ import CreateBlog from './components/CreateBlog.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Login from './components/Login.jsx';
 import { AuthProvider } from './components/auth/AuthContext.jsx';
-import PrivateRoute from './components/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {

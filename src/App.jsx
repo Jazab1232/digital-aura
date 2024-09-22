@@ -34,19 +34,12 @@ function App() {
   return (
     <>
       <Header showNav={showNav} setShowNav={setShowNav} search={search} setSearch={setSearch} />
-      <div className="appContainer">
 
-        <SideNav showNav={showNav} setShowNav={setShowNav} />
+      <SideNav showNav={showNav} setShowNav={setShowNav} />
+      <SearchTab search={search} setSearch={setSearch} blogData={blogData} />
+      <Outlet context={{ blogData, setBlogData, search, setSearch }} />
+      <Footer />
 
-        <SearchTab search={search} setSearch={setSearch} blogData={blogData} />
-
-        <div className="contentContainer">
-
-          <Outlet context={{ blogData, setBlogData, search, setSearch }} />
-
-          <Footer />
-        </div>
-      </div>
     </>
   )
 }
