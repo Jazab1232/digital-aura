@@ -31,10 +31,13 @@ export default function Detail() {
                 </div>
                 <div className="detailContent">
                     <div className="detailTitle">
-                        <p>Running macOS and Windows 10 on the Same Computer</p>
+                        <p>{currentBlog[0].title}</p>
                     </div>
-                    <div className="detailCategory">
-                        <p>Tech News</p>
+                    <div className="detailCategory" style={{ textTransform: 'capitalize' }}>
+                        <p>{currentBlog[0].category == 'techNews'
+                            ? 'Tech News'
+                            : currentBlog[0].category.charAt(0).toUpperCase() + currentBlog[0].category.slice(1)
+                        }</p>
                     </div>
                     <div className="detailText" >
                         <div dangerouslySetInnerHTML={{ __html: currentBlog.length > 0 ? currentBlog[0].content : '' }}></div>

@@ -57,3 +57,105 @@ h4,
 h5 {
     margin: 20px 0;
 }
+
+
+
+@media (max-width:992px) {
+    .detail {
+        padding-inline: 40px;
+    }
+
+    .detailBox {
+        width: 100%;
+        padding: 60px;
+
+    }
+}
+
+@media (max-width:782px) {
+    .detailTitle {
+        font-size: 28px;
+        font-weight: 800;
+        margin: 20px 0;
+    }
+
+    .detailText h2 {
+        font-size: 20px;
+    }
+
+    .detailText h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:680px) {
+    .detailBox {
+        padding: 30px;
+    }
+
+    .detailTitle {
+        font-size: 26px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+    .detailText h2 {
+        font-size: 18px;
+    }
+
+    .detailText h3 {
+        font-size: 16px;
+    }
+
+    .detailText p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:560px) {
+    .detailBox {
+        padding: 30px;
+    }
+
+    .detail {
+        margin-top: 70px;
+        padding-inline: 20px;
+    }
+
+    .detailTitle {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+}
+
+@media (max-width:480px) {
+    .detailBox {
+        padding: 30px;
+    }
+
+    .detail {
+        margin-top: 70px;
+        padding-inline: 5px;
+    }
+
+    .detailTitle {
+        font-size: 19px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+    .detailText h2 {
+        font-size: 18px;
+    }
+
+    .detailText h3 {
+        font-size: 16px;
+    }
+
+    .detailText div {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+}

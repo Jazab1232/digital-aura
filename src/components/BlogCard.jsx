@@ -17,8 +17,8 @@ export default function BlogCard({ data }) {
                 <img src={data.imageUrl} alt="" />
             </div>
             <div className="blogCartContent">
-                <div className="cardCategory">
-                    <p>{data.category}</p>
+                <div className="cardCategory" >
+                    <p style={{ textTransform: 'capitalize' }}>{data.category == 'techNews' ? 'Tech News' : data.category}</p>
                 </div>
                 <div className="cardTitle">
                     <p>{data.title}</p>
