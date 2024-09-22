@@ -15,12 +15,21 @@
 }
 
 @media (max-width:992px) {
-    
+
     .cardContainer {
         display: flex;
         flex-wrap: wrap;
     }
+
     .categoryPage {
         padding: 0 20px;
+    }
+}
+
+@media (max-width:480px) {
+
+    .categoryPage h1 {
+        margin: 50px 0 50px 0px;
+        font-size: 30px;
     }
 }

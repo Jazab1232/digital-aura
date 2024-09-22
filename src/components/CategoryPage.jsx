@@ -27,7 +27,9 @@ export default function CategoryPage() {
 
     return (
         <div className='categoryPage'>
-            <h1>Tech News</h1>
+            <h1 style={{ textTransform: 'capitalize' }}>
+                {category == 'techNews' ? 'Tech News' : category}
+            </h1>
             <div className="cardContainer">
                 {categoryData.map((data, index) => {
                     return <BlogCard key={index} data={data} />
