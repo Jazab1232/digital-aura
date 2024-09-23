@@ -10,8 +10,10 @@
 
 .cardContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin-bottom: 80px;
+    gap: 2%;
 }
 
 @media (max-width:992px) {

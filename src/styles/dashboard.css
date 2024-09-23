@@ -2,7 +2,9 @@
     padding: 40px;
     margin-top: 100px;
     width: 100vw;
+    max-width: 100%;
     box-sizing: border-box;
+
 }
 
 .dashboardHeader {
@@ -94,7 +96,9 @@
 
 .blogTableContainer {
     margin-top: 30px;
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .tableWrapper {
@@ -104,7 +108,7 @@
 .blogTable {
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     text-align: left;
 }
 
@@ -147,7 +151,6 @@
 
 
 
-/*Responsive Styles */
 @media (max-width: 768px) {
     .dashboardContainer {
         padding: 0px;
@@ -165,11 +168,13 @@
         gap: 10px;
         padding-left: 10px;
         padding-right: 10px;
+        margin-top: 30px;
     }
-    .profileDetails{
+
+    .profileDetails {
         display: flex;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
     }
 
     .profileImage {
@@ -196,7 +201,8 @@
         width: 100px;
         padding: 8px;
     }
-    .blogTableContainer{
+
+    .blogTableContainer {
         max-width: 95vw;
         box-sizing: border-box;
     }
@@ -205,13 +211,21 @@
         font-size: 12px;
     }
 
-    .tableHeading, .tableData {
+    .tableHeading,
+    .tableData {
         padding: 8px;
+
+        height: fit-content;
+    }
+
+    .tableData img {
+        width: 100%;
     }
 
     .thumbnailImage {
-        width: 50px;
+        width: 80%;
     }
+
     .tableWrapper {
         overflow-x: auto;
         width: 95%;
@@ -226,7 +240,8 @@
 
     .tableHeader,
     .tableHeading {
-        display: none; /* Hide the headers on small screens */
+        display: none;
+        /* Hide the headers on small screens */
     }
 
     .tableRow {
@@ -236,7 +251,7 @@
         padding: 10px;
         background-color: #ffffff;
         border-radius: 8px;
-        
+
     }
 
     .tableData {
@@ -253,7 +268,8 @@
     }
 
     .tableData::before {
-        content: attr(data-label); /* Use custom attribute to show the label */
+        content: attr(data-label);
+        /* Use custom attribute to show the label */
         position: absolute;
         left: 10px;
         font-weight: bold;
@@ -276,6 +292,10 @@
     .dashboardContainer {
         padding: 5px;
         margin-top: 50px;
+    }
+
+    .blogTableContainer {
+        width: 100%;
     }
 
     .profileImage {
@@ -301,9 +321,11 @@
         width: 40px;
     }
 
-    .tableHeading, .tableData {
+    .tableHeading,
+    .tableData {
         padding: 6px;
     }
+
     .tableData {
         font-size: 12px;
         padding: 8px;
@@ -311,5 +333,9 @@
 
     .thumbnailImage {
         width: 60px;
+    }
+
+    .tableWrapper {
+        width: 100%;
     }
 }
